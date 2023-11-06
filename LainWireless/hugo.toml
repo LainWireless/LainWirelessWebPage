@@ -1,6 +1,6 @@
 languageCode = 'es-es'
 title = 'LainWireless'
-theme = 'hugo-theme-learn'
+theme = 'learn'
 
 # For search functionality
 [outputs]
