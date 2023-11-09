@@ -20,5 +20,5 @@ variable "domain" {
 
 variable "aws_arn_certificado" {
   type = string
-  default = "arn:aws:acm:us-east-1:413330159251:certificate/4955b3b0-5a93-4934-9df6-6564f885c086"
+  default = "arn:aws:acm:us-east-1:413330159251:certificate/9f9c1db3-e440-4ed0-b3a0-5081b3c68824"
 }
