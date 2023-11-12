@@ -1,35 +1,36 @@
 
-:root {
-    --MAIN-TEXT-color: #fff; /* Color of text by default (blanco) */
-    --MAIN-TITLES-TEXT-color: #fff; /* Color of titles h2-h3-h4-h5 (blanco) */
-    --MAIN-LINK-color: #2c2c8a; /* Color of links (azul oscuro apagado) */
-    --MAIN-LINK-HOVER-color: #23236d; /* Color of hovered links (azul oscuro apagado) */
-    --MAIN-ANCHOR-color: #2d2da5; /* color of anchors on titles (azul oscuro apagado) */
+:root{
 
-    --MENU-HOME-LINK-color: #5e5e5e; /* Color of the home button text (gris) */
-    --MENU-HOME-LINK-HOVER-color: #716791; /* Color of the hovered home button text (azul oscuro apagado tirando a gris) */
+    --MAIN-TEXT-color:#323232; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color:#1C90F3; /* Color of links */
+    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
 
-    --MENU-HEADER-BG-color:#2b1d52; /* Background color of menu header */
-    --MENU-HEADER-BORDER-color:#443494; /*Color of menu header border */
+    --MENU-HOME-LINK-color: #323232; /* Color of the home button text */
+    --MENU-HOME-LINK-HOVER-color: #5e5e5e; /* Color of the hovered home button text */
 
-    --MENU-SEARCH-BG-color:#1f0f4a; /* Search field background color (by default borders + icons) */
-    --MENU-SEARCH-BOX-color: #3d216e; /* Override search field border color */
-    --MENU-SEARCH-BOX-ICONS-color: #422987; /* Override search field icons color */
+    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */
 
-    --MENU-SECTIONS-ACTIVE-BG-color:#2b2020; /* Background color of the active section and its childs */
-    --MENU-SECTIONS-BG-color:#312525; /* Background color of other sections */
+    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
+
+    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
     --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
     --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
     --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
     --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
 
-    --MENU-VISITED-color: #372770; /* Color of 'page visited' icons in menu */
-    --MENU-SECTION-HR-color: #2b2020; /* Color of <hr> separator in menu */
+    --MENU-VISITED-color: #33a0ff; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
+
 }
 
 body {
-    background-color: #121226; /* Fondo oscuro casi negro */
-    color: var(--MAIN-TEXT-color) !important; /* Color del texto principal (blanco) */
+    color: var(--MAIN-TEXT-color) !important;
 }
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
