@@ -2,33 +2,33 @@
 :root {
     --MAIN-TEXT-color: #fff; /* Color of text by default (blanco) */
     --MAIN-TITLES-TEXT-color: #fff; /* Color of titles h2-h3-h4-h5 (blanco) */
-    --MAIN-LINK-color: #1c1cf3; /* Color of links (azul oscuro apagado) */
-    --MAIN-LINK-HOVER-color: #1616d0; /* Color of hovered links (azul oscuro apagado) */
-    --MAIN-ANCHOR-color: #1c1cf3; /* color of anchors on titles (azul oscuro apagado) */
+    --MAIN-LINK-color: #2c2c8a; /* Color of links (azul oscuro apagado) */
+    --MAIN-LINK-HOVER-color: #23236d; /* Color of hovered links (azul oscuro apagado) */
+    --MAIN-ANCHOR-color: #2d2da5; /* color of anchors on titles (azul oscuro apagado) */
 
     --MENU-HOME-LINK-color: #5e5e5e; /* Color of the home button text (gris) */
-    --MENU-HOME-LINK-HOVER-color: #e6e6e6; /* Color of the hovered home button text (azul oscuro apagado tirando a gris) */
+    --MENU-HOME-LINK-HOVER-color: #716791; /* Color of the hovered home button text (azul oscuro apagado tirando a gris) */
 
-    --MENU-HEADER-BG-color: #2b2b2b; /* Background color of menu header (azul oscuro apagado tirando a gris) */
-    --MENU-HEADER-BORDER-color: #313131; /*Color of menu header border (azul oscuro apagado tirando a gris) */
+    --MENU-HEADER-BG-color:#2b1d52; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#443494; /*Color of menu header border */
 
-    --MENU-SEARCH-BG-color: #2b2b2b; /* Search field background color (by default borders + icons) (azul oscuro apagado tirando a gris) */
-    --MENU-SEARCH-BOX-color: #313131; /* Override search field border color (azul oscuro apagado tirando a gris) */
-    --MENU-SEARCH-BOX-ICONS-color: #ccc; /* Override search field icons color (gris) */
+    --MENU-SEARCH-BG-color:#1f0f4a; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #3d216e; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #422987; /* Override search field icons color */
 
-    --MENU-SECTIONS-ACTIVE-BG-color: #2b2b2b; /* Background color of the active section and its childs (azul oscuro apagado tirando a gris) */
-    --MENU-SECTIONS-BG-color: #313131; /* Background color of other sections (azul oscuro apagado tirando a gris) */
-    --MENU-SECTIONS-LINK-color: #1c1cf3; /* Color of links in menu (azul oscuro apagado) */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6; /* Color of links in menu, when hovered (azul oscuro apagado tirando a gris) */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #fff; /* Color of active category text (blanco) */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #2b2b2b; /* Color of background for the active category (only) (azul oscuro apagado tirando a gris) */
+    --MENU-SECTIONS-ACTIVE-BG-color:#2b2020; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#312525; /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
 
-    --MENU-VISITED-color: #1c1cf3; /* Color of 'page visited' icons in menu (azul oscuro apagado) */
-    --MENU-SECTION-HR-color: #2b2b2b; /* Color of <hr> separator in menu (azul oscuro apagado tirando a gris) */
+    --MENU-VISITED-color: #372770; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #2b2020; /* Color of <hr> separator in menu */
 }
 
 body {
-    background-color: #1a1a1a; /* Fondo oscuro casi negro */
+    background-color: #121226; /* Fondo oscuro casi negro */
     color: var(--MAIN-TEXT-color) !important; /* Color del texto principal (blanco) */
 }
 
