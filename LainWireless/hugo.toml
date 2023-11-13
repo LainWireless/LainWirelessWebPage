@@ -73,11 +73,3 @@ weight = 1
 languageName = "Spanish"
 landingPageURL = "/es/"
 landingPageName = "<i class='fas fa-home'></i> Inicio"
-
-[Languages.en]
-title = "LainWireless Documentation"
-weight = 2
-languageName = "English"
-landingPageURL = "/en/"
-landingPageName = "<i class='fas fa-home'></i> Home"
-
