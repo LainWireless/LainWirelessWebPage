@@ -1,10 +1,15 @@
-# **SAD Práctica 6**
-## **Redes Privadas Virtuales**
-#### Realizado por: **Iván Piña Castillo**
++++
+title = "VPN sitio a sitio con WireGuard"
+weight = 30
+chapter = false
+author = "Iván Piña Castillo"
+tags = ["VPN", "WireGuard"]
+description = "Documentación de mis tareas de VPN."
+readingTime = true
+hideComments = true
++++
 
-------------------------------------------------------------------------------------------------------------------------
-
-## 4. VPN sitio a sitio con WireGuard (10 puntos)
+## Enunciado
 
      Configura una VPN sitio a sitio usando WireGuard. Documenta el proceso adecuadamente y compáralo con el del apartado B.
 
@@ -185,14 +190,10 @@ Ahora ya podemos realizar las pruebas necesarias:
 ![Ejercicio 4](capturas/4/13.png)
 
 
-## Comparativa con OpenVPN
+### Comparativa con OpenVPN
 
 Tras la configuración, he podido comprobar que Wireguard es mucho mejor que OpenVPN en cuanto a velocidad, estabilidad de la conexión y facilidad de configuración. Esto es algo que he podido notar al realizar pruebas y establecer conexiones entre máquinas virtuales. Los resultados son bastante superiores a los que obtenía con OpenVPN, con una mayor rapidez y estabilidad.
 
 OpenVPN es una herramienta más antigua y que tiene más años de desarrollo que Wireguard, por lo que es posible que en un futuro Wireguard mejore aún más y se convierta en una herramienta más potente y eficiente que OpenVPN.
 
 En conclusión, la configuración de Wireguard es mucho más sencilla, rápida y con resultados mejores que los que obtenía con OpenVPN. Al probarlo, he comprobado que es mucho más eficiente tanto en lo que respecta a la velocidad como a la estabilidad de la conexión. 
-
-
-
-------------------------------------------------------------------------------------------------------------------------

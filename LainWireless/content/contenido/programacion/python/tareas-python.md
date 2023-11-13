@@ -4,12 +4,14 @@ weight = 15
 chapter = false
 author = "Iván Piña Castillo"
 tags = ["Python"]
-description = "Ducmentación de mis tareas de Pyhton."
+description = "Documentación de mis tareas de Pyhton."
 readingTime = true
 hideComments = true
 +++
 
-# Tarea 1: Estructura secuencial
+# Tarea 1
+
+### Ejercicios de estructura secuencial
 
 ## Ejercicio 1
 
@@ -63,8 +65,9 @@ print(f"El costo total del envío es: {costo_envio} pesos")
 ## Ejercicio 4
 
 Diseñar el algoritmo correspondiente a un programa que pida el total de kilómetros recorridos, el precio de la gasolina (por litro), el consumo del coche (litros/100 km) y nos muestre la siguiente información:
-* El total de litros de gasolina que ha gastado en el trayecto.
-* ¿Cuánto dinero te ha costado la gasolina?
+
++ El total de litros de gasolina que ha gastado en el trayecto.
++ ¿Cuánto dinero te ha costado la gasolina?
 
 ```python
 kilometros_recorridos = float(input("Ingrese el total de kilómetros recorridos: "))
@@ -108,7 +111,9 @@ print(f"Cantidad de gambas necesaria: {cantidad_gambas} kg")
 print(f"Costo total de la paella: {costo_total} pesos")
 ```
 
-# Tarea 2: Estructura alternativa
+# Tarea 2
+
+### Ejercicios de estructura alternativa
 
 ## Ejercicio 1
 
@@ -140,9 +145,9 @@ print("Que tenga un buen día.")
 
 Programa que pide la edad y en función del valor recibido da un mensaje diferente. Podemos distinguir, por ejemplo, tres situaciones:
 
-* si el valor es negativo, se trata de un error
-* si el valor está entre 0 y 17, se trata de un menor de edad
-* si el valor es superior o igual a 18, se trata de un mayor de edad
++ Si el valor es negativo, se trata de un error.
++ Si el valor está entre 0 y 17, se trata de un menor de edad.
++ Si el valor es superior o igual a 18, se trata de un mayor de edad.
 
 ```python
 edad = int(input("Introduzca su edad: "))
@@ -158,9 +163,9 @@ elif edad >=18:
 
 Programa que pide un valor y nos dice:
 
-* si es múltiplo de dos
-* si es múltiplo de cuatro (y de dos)
-* si no es múltiplo de dos
++ Si es múltiplo de dos.
++ Si es múltiplo de cuatro (y de dos).
++ Si no es múltiplo de dos.
 
 ```python
 numero = int(input("Introduzca un número: "))
@@ -179,10 +184,10 @@ Escriba un programa que simule el juego Piedra, papel, tijera para dos jugadores
 
 Las reglas del juego son las siguientes:
 
-* El jugador que ha sacado Piedra gana al jugador que ha sacado Tijera.
-* El jugador que ha sacado Tijera gana al jugador que ha sacado Papel.
-* El jugador que ha sacado Papel gana al jugador que ha sacado Piedra.
-* Si los dos sacan el mismo objeto es un empate.
++ El jugador que ha sacado Piedra gana al jugador que ha sacado Tijera.
++ El jugador que ha sacado Tijera gana al jugador que ha sacado Papel.
++ El jugador que ha sacado Papel gana al jugador que ha sacado Piedra.
++ Si los dos sacan el mismo objeto es un empate.
 
 ```python
 j1 = input ("Jugador 1 escoja, Piedra, Papel o Tijeras: ")
@@ -211,7 +216,9 @@ else:
         print ("Error.")
 ```
 
-# Tarea 3: Estructura repetitiva
+# Tarea 3
+
+### Ejercicios de estructura repetitiva
 
 ## Ejercicio 1
 
@@ -284,8 +291,10 @@ while intentos > 0:
 ## Ejercicio 4
 
 Diseñar el algoritmo correspondiente a un programa que pida el total de kilómetros recorridos, el precio de la gasolina (por litro), el consumo del coche (litros/100 km) y nos muestre la siguiente información:
-* El total de litros de gasolina que ha gastado en el trayecto.
-* ¿Cuánto dinero te ha costado la gasolina?
+
++ El total de litros de gasolina que ha gastado en el trayecto.
+
++ ¿Cuánto dinero te ha costado la gasolina?
 
 ```python
 suma = 0
@@ -360,9 +369,9 @@ else:
 
 ## Ejercicio 2
 
-#### Juego de las multiplicaciones
+### Juego de las multiplicaciones
 
-### Apartado 1
+## Apartado 1
 
 Escriba un programa que genere una multiplicación de dos números del 2 al 10 al azar, pregunte por el resultado y diga si se ha dado la respuesta correcta.
 
@@ -371,15 +380,15 @@ Para generar números al azar puedes utilizar el siguiente código:
 from random import randint
 a = randint(2, 10)
 
-### Apartado 2
+## Apartado 2
 
 Amplie el programa anterior haciendo que el programa pida primero al usuario cuántas multiplicaciones se van a plantear.
 
-### Apartado 3
+## Apartado 3
 
 Amplíe el programa anterior haciendo que el programa lleve la cuenta de las respuestas correctas e incorrectas e indique la nota correspondiente. Si la nota es igual o mayor que 9, el programa felicitará al usuario por el resultado. 
 
-Ayuda: La nota se calcula con la fórmula Nota=Correctas / Total * 10.
+**Ayuda:** La nota se calcula con la fórmula Nota=Correctas / Total * 10.
 
 **NOTA: Tienes que entregar sólo el código del apartado 3.**
 
@@ -426,7 +435,7 @@ if nota >= 9:
     print("¡Felicidades por tu excelente desempeño!")  
 ```
 
-### Ejercicios cadenas
+### Ejercicios de cadenas
 
 ## Ejercicio 3
 
@@ -455,8 +464,9 @@ else:
 
 Realiza un programa que pida un cadena. A continuación debe pedir otra cadena. El programa debe buscar la segunda cadena en la primera (ignorando mayúsculas o minúsculas) y podrá responder una de las siguientes opciones:
 
-**La segunda cadena es una subcadena de la primera.**
-** La segunda cadena no es una subcadena de la primera.**
++ La segunda cadena es una subcadena de la primera.
+
++ La segunda cadena no es una subcadena de la primera.
 
 ```python
 cadena1 = input("Ingrese la primera cadena: ")
@@ -529,9 +539,11 @@ Opción:
 
 Al elegir una opción se realiza la operación:
 
-**Sumar: Muestra la suma de los números.**
-**Máximo: Muestra el máximo de la lista.**
-**Medía: Muestra la Media.**
++ Sumar: Muestra la suma de los números.
+
++ Máximo: Muestra el máximo de la lista.
+
++ Medía: Muestra la Media.
 
 El menú se va repitiendo hasta que elegimos la opción 4 (Salir).
 
@@ -628,9 +640,11 @@ else:
 
 Escriba un programa que permita crear una lista de palabras y que, a continuación de tres opciones:
 
-* Contar: Me pide una cadena, y me dice cuantas veces aparece en la lista.
-* Modificar: Me pide una cadena, y otra cadena a modificar, y modifica todas alas apariciones de la primera por la segunda en la lista.
-* Eliminar: Me pide una cadena, y la elimina de la lista.
++ Contar: Me pide una cadena, y me dice cuantas veces aparece en la lista.
+
++ Modificar: Me pide una cadena, y otra cadena a modificar, y modifica todas alas apariciones de la primera por la segunda en la lista.
+
++ Eliminar: Me pide una cadena, y la elimina de la lista.
 
 El programa te muestra el menú, hasta que introduzcamos la opción 0 de salir.
 
@@ -674,15 +688,15 @@ while True:
 
 Vamos a crear un programa que tenga el siguiente menú:
 
-   * Añadir número a la lista: Me pide un número de la lista y lo añade al final de la lista.
-   * Añadir número de la lista en una posición: Me pide un número y una posición, y si la posición existe en la lista lo añade a ella (la posición se pide a partir de 1).
-   * Longitud de la lista: te muestra el número de elementos de la lista.
-   * Eliminar el último número: Muestra el último número de la lista y lo borra.
-   * Eliminar un número: Pide una posición, y si la posición existe en la lista lo borra de ella (la posición se pide a partir de 1).
-   * Contar números: Te pide un número y te dice cuantas apariciones hay en la lista.
-   * Posiciones de un número: Te pide un número y te dice en que posiciones está (contando desde 1).
-   * Mostrar números: Muestra los números de la lista
-   * Salir
++ Añadir número a la lista: Me pide un número de la lista y lo añade al final de la lista.
++ Añadir número de la lista en una posición: Me pide un número y una posición, y si la posición existe en la lista lo añade a ella (la posición se pide a partir de 1).
++ Longitud de la lista: te muestra el número de elementos de la lista.
++ Eliminar el último número: Muestra el último número de la lista y lo borra.
++ Eliminar un número: Pide una posición, y si la posición existe en la lista lo borra de ella (la posición se pide a partir de 1).
++ Contar números: Te pide un número y te dice cuantas apariciones hay en la lista.
++ Posiciones de un número: Te pide un número y te dice en que posiciones está (contando desde 1).
++ Mostrar números: Muestra los números de la lista
++ Salir
 
 **Nota: Utilizar todos los métodos de las listas que sean necesarios.**
 

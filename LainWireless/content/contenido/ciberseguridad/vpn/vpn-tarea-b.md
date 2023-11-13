@@ -1,10 +1,15 @@
-# **SAD Práctica 6**
-## **Redes Privadas Virtuales**
-#### Realizado por: **Iván Piña Castillo**
++++
+title = "VPN sitio a sitio con OpenVPN y certificados x509"
+weight = 20
+chapter = false
+author = "Iván Piña Castillo"
+tags = ["VPN", "OpenVPN"]
+description = "Documentación de mis tareas de VPN."
+readingTime = true
+hideComments = true
++++
 
-------------------------------------------------------------------------------------------------------------------------
-
-## 2. VPN sitio a sitio con OpenVPN y certificados x509 (10 puntos)
+## Enunciado
 
     Configura una conexión VPN sitio a sitio entre dos equipos del cloud:
 
@@ -302,5 +307,3 @@ Ya hemos terminado de configurar este escenario y podemos pasar a hacer las prue
 - Desde el cliente del escenario 2:
 
 ![Ejercicio 2](capturas/2/13.png)
-
-------------------------------------------------------------------------------------------------------------------------

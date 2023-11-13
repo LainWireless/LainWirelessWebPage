@@ -29,8 +29,8 @@ home = [ "HTML", "RSS", "JSON"]
   # If set to false, a Home button will appear below the search bar on the menu.
   # It is redirecting to the landing page of the current language if specified. (Default is "/")
   disableLandingPageButton = false
-  landingPageURL = "/"
-  landingPageName = "<i class='fas fa-home'></i> Inicio"
+  #landingPageURL = "/"
+  #landingPageName = "<i class='fas fa-home'></i> Inicio"
   # When using mulitlingual website, disable the switch language button.
   disableLanguageSwitchingButton = false
   # Hide breadcrumbs in the header and only show the current page title
@@ -49,3 +49,35 @@ home = [ "HTML", "RSS", "JSON"]
   custom_css = ["css/foo.css", "css/bar.css"]
   # Change the title separator. Default to "::".
   titleSeparator = "-"
+
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github repo"
+identifier = "ds"
+url = "https://github.com/LainWireless"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-linkedin'></i> Linkedin"
+url = "https://www.linkedin.com/in/ivan-pina-castillo/"
+weight = 11
+
+# Spanish is the default language
+defaultContentLanguage = "es"
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
+
+[Languages]
+[Languages.es]
+title = "Documentación de LainWireless"
+weight = 1
+languageName = "Spanish"
+landingPageURL = "/es/"
+landingPageName = "<i class='fas fa-home'></i> Inicio"
+
+[Languages.en]
+title = "LainWireless Documentation"
+weight = 2
+languageName = "English"
+landingPageURL = "/en/"
+landingPageName = "<i class='fas fa-home'></i> Home"
+

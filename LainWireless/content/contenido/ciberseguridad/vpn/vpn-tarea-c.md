@@ -1,10 +1,15 @@
-# **SAD Práctica 6**
-## **Redes Privadas Virtuales**
-#### Realizado por: **Iván Piña Castillo**
++++
+title = "VPN de acceso remoto con WireGuard"
+weight = 25
+chapter = false
+author = "Iván Piña Castillo"
+tags = ["VPN", "WireGuard"]
+description = "Documentación de mis tareas de VPN."
+readingTime = true
+hideComments = true
++++
 
-------------------------------------------------------------------------------------------------------------------------
-
-## 3. VPN de acceso remoto con WireGuard (5 puntos)
+## Enunciado
 
     Monta una VPN de acceso remoto usando Wireguard. Intenta probarla con clientes Windows, Linux y Android. Documenta el proceso adecuadamente y compáralo con el del apartado A.
 
@@ -341,6 +346,7 @@ Hagamos las pruebas:
 ![Ejercicio 3](capturas/3/19.png)
 
 ### Cliente Android (Android 11)
+
     Para este ejercicio, he usado un móvil real con Android 11 en lugar de una máquina virtual. Es por ello que ahora el servidor VPN será mi anfitrión en lugar de la máquina virtual. Esto no afecta a la configuración del cliente Android, ya que la metodología es la misma.
 
 Para usar Wireguard con Android, primero tenemos que descargarnos la aplicación desde la playstore:
@@ -442,5 +448,3 @@ Ahora ya podemos realizar las pruebas de funcionamiento (he instalado una aplica
 Después de realizar todos los pasos para establecer un acceso remoto con OpenVPN y Wireguard, me he dado cuenta de que hay algunas diferencias entre ambos protocolos y ninguna de ellas es mejor que la otra, sino que depende de las necesidades de cada usuario pero que respecto a mis necesidades, Wireguard me convence más.
 
 Por ejemplo, en todas las pruebas que he realizado con máquinas virtuales, se ve claramente que Wireguard es mucho más veloz. Esto, en un entorno real, daría un salto cualitativo en la experiencia de usuario. Algo a destacar es que la configuración de Wireguard es mucho más sencilla y se comparte de la misma forma en los clientes, sin importar el sistema operativo. Y por último, no hay necesidad de crear una autoridad certificadora para Wireguard, lo cual es una gran ventaja a la hora de configurar el túnel, ya que no hay que preocuparse de crear un certificado para cada cliente. Simplemente se genera una clave privada y pública para cada cliente y se añade al fichero de configuración del servidor.
-
-------------------------------------------------------------------------------------------------------------------------

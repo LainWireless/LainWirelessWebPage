@@ -1,10 +1,15 @@
-# **SAD Práctica 6**
-## **Redes Privadas Virtuales**
-#### Realizado por: **Iván Piña Castillo**
++++
+title = "VPN de acceso remoto con OpenVPN y certificados x509"
+weight = 15
+chapter = false
+author = "Iván Piña Castillo"
+tags = ["VPN", "OpenVPN"]
+description = "Documentación de mis tareas de VPN."
+readingTime = true
+hideComments = true
++++
 
-------------------------------------------------------------------------------------------------------------------------
-
-## 1. VPN de acceso remoto con OpenVPN y certificados x509 (5 puntos)
+## Enunciado
 
      Configura una conexión VPN de acceso remoto entre dos equipos del cloud:
 
@@ -252,8 +257,6 @@ Pruebas de funcionamiento (todas hechas desde ClienteVPN1):
 ![Ejercicio 1](capturas/1/11.png)
 
 Como vemos, el ClienteVPN1 puede hacer ping perfectamente a la máquina en la otra red y si vemos la salida del comando traceroute, atraviesa el túnel para llegar a su destino.
-
-------------------------------------------------------------------------------------------------------------------------
 
 
 
