@@ -65,11 +65,3 @@ weight = 11
 defaultContentLanguage = "es"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
 defaultContentLanguageInSubdir= true
-
-[Languages]
-[Languages.es]
-title = "Documentación de LainWireless"
-weight = 1
-languageName = "Spanish"
-landingPageURL = "/es/"
-landingPageName = "<i class='fas fa-home'></i> Inicio"

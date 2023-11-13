@@ -14,7 +14,7 @@ weight = 1
 
 ## Contenidos
 
-{{% children style="h2" depth="5" description="true" %}}
+{{% children style="h2" depth="5" description="false" %}}
 
 ## Sitio Web de Documentación
 
