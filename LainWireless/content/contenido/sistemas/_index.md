@@ -9,3 +9,7 @@ weight = 5
 # Sistemas
 
 En este apartado se encontrará la documentación de mis proyectos relacionados con la implantación y la administración de sistemas operativos.
+
+#### Índice de contenidos
+
+{{% children style="h2" depth="3" depth="999" %}}

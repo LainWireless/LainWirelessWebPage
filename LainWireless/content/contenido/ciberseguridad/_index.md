@@ -10,6 +10,6 @@ weight = 5
 
 En este apartado se encontrará la documentación de mis proyectos relacionados con la ciberseguridad y la alta disponibilidad.
 
-#### Indice de contenidos
+#### Índice de contenidos
 
-- [Redes Privadas Virtuales (VPN)](vpn/_index.md)
+{{% children style="h2" depth="3" depth="999" %}}

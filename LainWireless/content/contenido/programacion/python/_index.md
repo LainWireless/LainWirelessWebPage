@@ -10,6 +10,6 @@ weight = 5
 
 En este apartado se encontrará la documentación de mis proyectos en Python.
 
-#### Indice de contenidos
+#### Índice de contenidos
 
-- [Tareas de Python](tareas-python.md)
+{{% children style="h2" depth="3" depth="999" %}}
