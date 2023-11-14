@@ -464,7 +464,7 @@ h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     text-align: center;
     text-transform: uppercase;
-    color: #222;
+    color: #ffffff;
     font-weight: 200;
 }
 blockquote {
@@ -988,7 +988,7 @@ td {
     background: #34495E;
 }
 #top-bar {
-    background: #5c426b;
+    background: #3b2547;
     border-radius: 2px;
     padding: 0 1rem;
     height: 0;

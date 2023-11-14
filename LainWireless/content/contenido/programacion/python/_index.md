@@ -13,4 +13,4 @@ En este apartado se encontrará la documentación de mis proyectos en Python.
 
 #### Índice de contenidos
 
-{{% children style="h3" depth="999" showhidden="false" description="false" %}}
+{{% children style="h3" depth="999" %}}
