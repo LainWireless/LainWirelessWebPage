@@ -2,6 +2,7 @@
 title = "Contenido"
 chapter = true
 weight = 5
+description = "Contenidos de mi página web"
 +++
 
 ### Introducción.
@@ -12,5 +13,5 @@ En este apartado se encontrarán los trabajos y proyectos realizados durante mis
 
 #### Índice de contenidos
 
-{{% children style="h2" depth="3" depth="999" %}}
+{{% children style="h3" depth="999" showhidden="false" description="false" %}}
 

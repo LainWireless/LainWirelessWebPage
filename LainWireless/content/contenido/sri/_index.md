@@ -2,6 +2,7 @@
 title = "Servicios de Red e Internet"
 chapter = true
 weight = 5
+description = "Documentación de mis proyectos relacionados con los servicios de red e internet"
 +++
 
 ### Introducción.
@@ -12,4 +13,4 @@ En este apartado se encontrará la documentación de mis proyectos relacionados 
 
 #### Índice de contenidos.
 
-{{% children style="h2" depth="3" depth="999" %}}
+{{% children style="h3" depth="999" showhidden="false" description="false" %}}

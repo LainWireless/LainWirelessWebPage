@@ -12,4 +12,4 @@ En este apartado se encontrará la documentación de mis proyectos relacionados 
 
 #### Índice de contenidos
 
-{{% children style="h2" depth="3" depth="999" %}}
+{{% children style="h3" depth="999" showhidden="false" description="false" %}}

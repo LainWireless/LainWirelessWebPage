@@ -9,3 +9,7 @@ weight = 5
 # Kubernetes
 
 En este apartado se encontrará la documentación de mis proyectos relacionados con la administración y despliegue de aplicaciones en Kubernetes.
+
+#### Índice de contenidos
+
+{{% children style="h3" depth="999" showhidden="false" description="false" %}}

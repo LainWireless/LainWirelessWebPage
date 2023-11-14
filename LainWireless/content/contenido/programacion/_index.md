@@ -12,6 +12,6 @@ En este apartado se encontrarán la documentación sobre mis proyectos realizado
 
 #### Índice de contenidos
 
-{{% children style="h2" depth="3" depth="999" %}}
+{{% children style="h3" depth="999" showhidden="false" description="false" %}}
 
 

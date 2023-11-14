@@ -189,7 +189,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     color: #e6e6e6;
 }
 #sidebar a.subtitle {
-    color: rgba(204, 204, 204, 0.6);
+    color: rgb(255, 255, 255);
 }
 #sidebar hr {
     border-bottom: 1px solid #2a232f;
@@ -988,7 +988,7 @@ td {
     background: #34495E;
 }
 #top-bar {
-    background: #F6F6F6;
+    background: #5c426b;
     border-radius: 2px;
     padding: 0 1rem;
     height: 0;
