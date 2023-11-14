@@ -1,6 +1,6 @@
 :root {
-    --MAIN-TEXT-color: #777; /* Color de texto por defecto */
-    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color de títulos h2-h3-h4-h5 */
+    --MAIN-TEXT-color: #ffffff; /* Color de texto por defecto */
+    --MAIN-TITLES-TEXT-color: #ffffff; /* Color de títulos h2-h3-h4-h5 */
     --MAIN-LINK-color: #00bdf3; /* Color de enlaces */
     --MAIN-LINK-HOVER-color: #0082a7; /* Color de enlaces al pasar el mouse */
     --MAIN-ANCHOR-color: #00bdf3; /* Color de anclas en títulos */
@@ -26,11 +26,9 @@
     --MENU-SECTION-HR-color: #F0F2F4; /* Color del separador <hr> en el menú */
 }
 
-/* Rest of the CSS remains unchanged */
-
-
 body {
-    color: var(--MAIN-TEXT-color) !important;
+    background-color: #101820; /* Fondo oscuro casi negro */
+    color: var(--MAIN-TEXT-color) !important; /* Color del texto principal (blanco) */
 }
 
 textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
