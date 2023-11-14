@@ -2,7 +2,7 @@
     --MAIN-TEXT-color: #ffffff; /* Color de texto por defecto */
     --MAIN-TITLES-TEXT-color: #ffffff; /* Color de títulos h2-h3-h4-h5 */
     --MAIN-LINK-color: #764890; /* Color de enlaces */
-    --MAIN-LINK-HOVER-color: #8451a1; /* Color de enlaces al pasar el mouse */
+    --MAIN-LINK-HOVER-color: #a063c4; /* Color de enlaces al pasar el mouse */
     --MAIN-ANCHOR-color: #764890; /* Color de anclas en títulos */
 
     --MENU-HOME-LINK-color: #323232; /* Color del texto del botón de inicio */
@@ -15,12 +15,12 @@
     --MENU-SEARCH-BOX-color: #8451a1; /* Color de borde del campo de búsqueda */
     --MENU-SEARCH-BOX-ICONS-color: #fff; /* Color de los iconos del campo de búsqueda */
 
-    --MENU-SECTIONS-ACTIVE-BG-color: #8451a1; /* Color de fondo de la sección activa y sus hijos */
+    --MENU-SECTIONS-ACTIVE-BG-color: #5f3a74; /* Color de fondo de la sección activa y sus hijos */
     --MENU-SECTIONS-BG-color: #322A38; /* Color de fondo de otras secciones */
-    --MENU-SECTIONS-LINK-color: #ccc; /* Color de enlaces en el menú */
-    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6; /* Color de enlaces en el menú al pasar el mouse */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #a5a5a5; /* Color del texto de la categoría activa */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color de fondo para la categoría activa (solo) */
+    --MENU-SECTIONS-LINK-color: #ffffff; /* Color de enlaces en el menú */
+    --MENU-SECTIONS-LINK-HOVER-color: #b3b2b2; /* Color de enlaces en el menú al pasar el mouse */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #a063c4; /* Color del texto de la categoría activa */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: rgb(53, 60, 92); /* Color de fondo para la categoría activa (solo) */
 
     --MENU-VISITED-color: #5c426b; /* Color de los íconos de 'página visitada' en el menú */
     --MENU-SECTION-HR-color: #F0F2F4; /* Color del separador <hr> en el menú */
