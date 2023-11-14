@@ -19,11 +19,11 @@
     --MENU-SECTIONS-BG-color: #322A38; /* Color de fondo de otras secciones */
     --MENU-SECTIONS-LINK-color: #ffffff; /* Color de enlaces en el menú */
     --MENU-SECTIONS-LINK-HOVER-color: #b3b2b2; /* Color de enlaces en el menú al pasar el mouse */
-    --MENU-SECTION-ACTIVE-CATEGORY-color: #a063c4; /* Color del texto de la categoría activa */
-    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: rgb(53, 60, 92); /* Color de fondo para la categoría activa (solo) */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #ffffff; /* Color del texto de la categoría activa */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #101820; /* Color de fondo para la categoría activa (solo) */
 
-    --MENU-VISITED-color: #5c426b; /* Color de los íconos de 'página visitada' en el menú */
-    --MENU-SECTION-HR-color: #F0F2F4; /* Color del separador <hr> en el menú */
+    --MENU-VISITED-color: #ffffff; /* Color de los íconos de 'página visitada' en el menú */
+    --MENU-SECTION-HR-color: #5c426b; /* Color del separador <hr> en el menú */
 }
 
 body {
