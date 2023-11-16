@@ -17,7 +17,7 @@ home = [ "HTML", "RSS", "JSON"]
   disableSearch = false
   disableAssetsBusting = false
   disableInlineCopyToClipBoard = false
-  disableShortcutsTitle = true
+  disableShortcutsTitle = false
   disableLandingPageButton = false
   #landingPageURL = "/"
   landingPageName = "<i class='fas fa-home'></i> Inicio"
@@ -43,10 +43,8 @@ home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-tags'></i> Tags"
-  url = "/tags"
+  url = "tags/"
   weight = 30
-  disableShortcutsTitle = true
-
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-layer-group'></i> Categorías"
