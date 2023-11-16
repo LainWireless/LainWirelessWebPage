@@ -1,4 +1,8 @@
 languageCode = 'es-es'
+# Spanish is the default language
+defaultContentLanguage = "es"
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
 title = 'LainWirelesss'
 theme = 'learn'
 
@@ -7,61 +11,44 @@ theme = 'learn'
 home = [ "HTML", "RSS", "JSON"]
 
 [params]
-  # Prefix URL to edit current page. Will display an "Edit this page" button on top right hand corner of every page.
-  # Useful to give opportunity to people to create merge request for your doc.
-  # See the config.toml file from this documentation site to have an example.
-  #editURL = ""
-  # Author of the site, will be used in meta information
   author = "Iván Piña Castillo"
-  # Description of the site, will be used in meta information
   description = "Blog personal para mi documentación."
-  # Shows a checkmark for visited pages on the menu
   showVisitedLinks = false
-  # Disable search function. It will hide search bar
   disableSearch = false
-  # Javascript and CSS cache are automatically busted when new version of site is generated.
-  # Set this to true to disable this behavior (some proxies don't handle well this optimization)
   disableAssetsBusting = false
-  # Set this to true to disable copy-to-clipboard button for inline code.
   disableInlineCopyToClipBoard = false
-  # A title for shortcuts in menu is set by default. Set this to true to disable it.
-  disableShortcutsTitle = false
-  # If set to false, a Home button will appear below the search bar on the menu.
-  # It is redirecting to the landing page of the current language if specified. (Default is "/")
+  disableShortcutsTitle = true
   disableLandingPageButton = false
   #landingPageURL = "/"
-  #landingPageName = "<i class='fas fa-home'></i> Inicio"
-  # When using mulitlingual website, disable the switch language button.
+  landingPageName = "<i class='fas fa-home'></i> Inicio"
   disableLanguageSwitchingButton = false
-  # Hide breadcrumbs in the header and only show the current page title
   disableBreadcrumb = false
-  # If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic)
   disableMermaid = true
-  # Specifies the remote location of the mermaid js
-  #customMermaidURL = "https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"
-  # Hide Next and Previous page buttons normally displayed full height beside content
-  disableNextPrev = false
-  # Order sections in menu by "weight" or "title". Default to "weight"
+  disableNextPrev = true
   ordersectionsby = "weight"
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "mine"
-  # Provide a list of custom css files to load relative from the `static/` folder in the site root.
   custom_css = ["css/foo.css", "css/bar.css"]
-  # Change the title separator. Default to "::".
   titleSeparator = "-"
 
 [[menu.shortcuts]] 
-name = "<i class='fab fa-github'></i> Github repo"
-identifier = "ds"
-url = "https://github.com/LainWireless"
-weight = 10
+  name = "<i class='fab fa-github'></i> Github repo"
+  identifier = "ds"
+  url = "https://github.com/LainWireless"
+  weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fab fa-linkedin'></i> Linkedin"
-url = "https://www.linkedin.com/in/ivan-pina-castillo/"
-weight = 11
+  name = "<i class='fab fa-linkedin'></i> Linkedin"
+  url = "https://www.linkedin.com/in/ivan-pina-castillo/"
+  weight = 20
 
-# Spanish is the default language
-defaultContentLanguage = "es"
-# Force to have /en/my-page and /fr/my-page routes, even for default language.
-defaultContentLanguageInSubdir= true
+[[menu.shortcuts]]
+  name = "<i class='fas fa-tags'></i> Tags"
+  url = "/tags"
+  weight = 30
+  disableShortcutsTitle = true
+
+
+[[menu.shortcuts]]
+  name = "<i class='fas fa-layer-group'></i> Categorías"
+  pageRef = "categories/"
+  weight = 40
