@@ -2,7 +2,7 @@ languageCode = 'es-es'
 # Spanish is the default language
 defaultContentLanguage = "es"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
-defaultContentLanguageInSubdir= true
+defaultContentLanguageInSubdir= false
 title = 'LainWirelesss'
 theme = 'learn'
 
