@@ -1,0 +1,110 @@
++++
+title = "Inicio"
+chapter = true
+weight = 1
++++
+
+<!-- Header -->
+
+# LainWireless Website {style=text-align:center}
+
+<h5 align="center"><b> 👨🏻‍💻 No matter where you are, everyone is always connected 👨🏻‍💻 </b></h5>
+
+<img src="/img/portada.png" alt="Portada" width="100%" height="100%">
+
+## 💻 SysAdmin & DevOps {style=text-align:center}
+<hr>
+
+<!-- Introducción -->
+
+En este espacio digital, nos sumergimos en el vasto universo de la tecnología, explorando cada rincón.
+
+Mi objetivo es proporcionar una documentación de las tecnologías que dan forma al mundo digital actual. Desde Sistemas Operativos hasta las últimas innovaciones en Cloud Computing con AWS y Azure, y el uso de Orquestadores de Contenedores como Kubernetes, OpenShift o Rancher.
+
+No existen conocimientos suficientes para satisfacer la curiosidad y las necesidades de aquellos que buscan comprender y dominar por completo el complejo ecosistema tecnológico.
+
+Ya seas un profesional experimentado o un entusiasta que recién comienza, encontrarás recursos valiosos, tutoriales prácticos y análisis en profundidad que te ayudarán a expandir tus conocimientos y habilidades.
+
+Explora, aprende y forma parte de nuestra comunidad dedicada a la excelencia tecnológica. ¡Bienvenido a LainWireless!
+
+<br>
+<br>
+
+<!-- Apartados -->
+
+### 📚 Documentación {style=text-align:center}
+<hr>
+
+<style>
+  table {
+    border-collapse: collapse;
+    width: 40%;
+  }
+  table, th, td {
+    border: none;
+  }
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+</style>
+
+<table align="center">
+  <tbody>
+    <tr>
+      <td><a href="sistemas"><img src="/img/sistemas.png" alt="Sistemas" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="sistemas">Sistemas</a></h3></td>
+      <td><a href="sistemas"><img src="/img/sistemas2.png" alt="Sistemas2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="cloud"><img src="/img/cloud.png" alt="Cloud Computing" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="cloud">Cloud Computing</a></h3></td>
+      <td><a href="cloud"><img src="/img/cloud2.png" alt="Cloud Computing2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="ciberseguridad"><img src="/img/ciberseguridad.png" alt="Ciberseguridad" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="ciberseguridad">Ciberseguridad</a></h3></td>
+      <td><a href="ciberseguridad"><img src="/img/ciberseguridad2.png" alt="Ciberseguridad2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="redes"><img src="/img/redes.png" alt="Redes" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="redes">Redes</a></h3></td>
+      <td><a href="redes"><img src="/img/redes2.png" alt="Redes2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="iaw"><img src="/img/iaw.png" alt="Implantación de Aplicaciones Web" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="iaw">Implantación de Aplicaciones Web</a></h3></td>
+      <td><a href="iaw"><img src="/img/iaw2.png" alt="Implantación de Aplicaciones Web2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="sri"><img src="/img/sri.png" alt="Servicios de Red e Internet" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="sri">Servicios de Red e Internet</a></h3></td>
+      <td><a href="sri"><img src="/img/sri2.png" alt="Servicios de Red e Internet2" style="max-width: 80px;" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="programacion"><img src="/img/programacion.png" alt="Programación" style="max-width: 80px;" /></a></td>
+      <td><h3><a href="programacion">Programación</a></h3></td>
+      <td><a href="programacion"><img src="/img/programacion2.png" alt="Programación2" style="max-width: 80px;" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Footer -->
+
+#### Sitio Web de Documentación {style=text-align:center}
+---
+
+Esta documentación ha sido generada estáticamente con Hugo usando el Theme Learn. El código fuente está disponible [en GitHub](https://github.com/matcornic/hugo-theme-learn).
+
+{{% notice info %}}
+Ha sido desplegado usando AWS, Terraform, Hugo y GitHub Actions bajo la metodología GitOps.
+{{% /notice %}}
+
+{{% notice note %}}
+Agradecimientos a [Juan Jesús](https://hub.juanje.net) por su ayuda en la creación de esta página Web.
+{{% /notice %}}

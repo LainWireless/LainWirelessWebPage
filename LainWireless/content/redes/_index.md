@@ -1,12 +1,12 @@
 +++
-title = "Networks"
+title = "Redes"
 chapter = true
 weight = 5
 +++
 
 ### Introducción.
 
-# Networks
+# Redes
 
 En este apartado se encontrará la documentación de mis proyectos relacionados con planificación y administración de redes.
 

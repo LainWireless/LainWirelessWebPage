@@ -30,6 +30,9 @@ home = [ "HTML", "RSS", "JSON"]
   custom_css = ["css/foo.css", "css/bar.css"]
   titleSeparator = "-"
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [[menu.shortcuts]] 
   name = "<i class='fab fa-github'></i> Github repo"
   identifier = "ds"

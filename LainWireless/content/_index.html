@@ -4,21 +4,95 @@ chapter = true
 weight = 1
 +++
 
-<h1 align="center"><b> LainWireless Website </b></h1>
+<!-- Portada -->
+
+<h1><b> LainWireless Website </b></h1>
 <h5 align="center"><b> 👨🏻‍💻 No matter where you are, everyone is always connected 👨🏻‍💻 </b></h5>
 
-<img src="/img/portada.png" alt="Portada" width="100%" height="100%">
+<a href="/"><img src="/img/portada.png" alt="Portada" width="100%" height="100%"></a>
+
+<!-- Introducción -->
 
 <h2 align="center"><b> 💻 SysAdmin & DevOps 💻 </b></h3>
-
-<h3 align="center"><b> 📚 Documentación 📚 </b></h3>
 <hr>
-{{% children style="h4" %}}
 
-<h4 align="center"><b> Sitio Web de Documentación </b></h2>
+<div>
+    <p> Mi objetivo es proporcionar una documentación, tanto para mí como para aquel que encuentre esta web, de las tecnologías que más me interesan y que más utilizo en mi día a día. </p>
+    <p> Desde los comandos Linux más básicos hasta las últimas innovaciones en Cloud Computing con AWS y Azure y el uso de Orquestadores de Contenedores 
+        como Kubernetes, OpenShift o Rancher. </p>
+    <p> Espero que encuentres recursos que te sean valiosos, tutoriales prácticos 
+        y análisis que te ayuden a expandir tus conocimientos y habilidades. </p>
+    <p> Explora, aprende y forma parte de nuestra comunidad. ¡Bienvenido a LainWireless! </p>
+</div>
+
+<br>
+<br>
+
+<!-- Apartados -->
+
+<h3><b> 📚 Documentación 📚 </b></h3>
 <hr>
-<p align="center"> Esta documentación ha sido generada estáticamente con Hugo usando el Theme Learn. 
-El código fuente está disponible <a href="https://github.com/matcornic/hugo-theme-learn">en GitHub</a> </p>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 40%;
+    }
+    table, th, td {
+        border: none;
+    }
+    th, td {
+        text-align: center;
+        padding: 8px;
+    }
+</style>
+
+<table align="center">
+    <tbody>
+        <tr>
+            <td><a href="sistemas"><img src="/img/sistemas.png" alt="Sistemas" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="sistemas">Sistemas</a></h3></td>
+                <td><a href="sistemas"><img src="/img/sistemas2.png" alt="Sistemas2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="cloud"><img src="/img/cloud.png" alt="Cloud Computing" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="cloud">Cloud Computing</a></h3></td>
+            <td><a href="cloud"><img src="/img/cloud2.png" alt="Cloud Computing2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="ciberseguridad"><img src="/img/ciberseguridad.png" alt="Ciberseguridad" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="ciberseguridad">Ciberseguridad</a></h3></td>
+            <td><a href="ciberseguridad"><img src="/img/ciberseguridad2.png" alt="Ciberseguridad2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="redes"><img src="/img/redes.png" alt="Redes" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="redes">Redes</a></h3></td>
+            <td><a href="redes"><img src="/img/redes2.png" alt="Redes2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="iaw"><img src="/img/iaw.png" alt="Implantación de Aplicaciones Web" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="iaw">Implantación de Aplicaciones Web</a></h3></td>
+            <td><a href="iaw"><img src="/img/iaw2.png" alt="Implantación de Aplicaciones Web2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="sri"><img src="/img/sri.png" alt="Servicios de Red e Internet" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="sri">Servicios de Red e Internet</a></h3></td>
+            <td><a href="sri"><img src="/img/sri2.png" alt="Servicios de Red e Internet2" style="max-width: 80px;" /></a></td>
+        </tr>
+        <tr>
+            <td><a href="programacion"><img src="/img/programacion.png" alt="Programación" style="max-width: 80px;" /></a></td>
+            <td><h3><a href="programacion">Programación</a></h3></td>
+            <td><a href="programacion"><img src="/img/programacion2.png" alt="Programación2" style="max-width: 80px;" /></a></td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+
+<!-- Final -->
 
 {{% notice info %}}
 Ha sido desplegado usando AWS, Terraform, Hugo y GitHub Actions bajo la metodología GitOps.
