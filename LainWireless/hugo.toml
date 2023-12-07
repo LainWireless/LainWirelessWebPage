@@ -33,16 +33,26 @@ home = [ "HTML", "RSS", "JSON"]
 [markup.goldmark.renderer]
   unsafe= true
 
+[[menu.shortcuts]]
+  name = "<i class='fas fa-user'></i> Sobre mí"
+  url = "about/"
+  weight = 5
+
 [[menu.shortcuts]] 
-  name = "<i class='fab fa-github'></i> Github repo"
+  name = "<i class='fab fa-github'></i> GitHub repo"
   identifier = "ds"
   url = "https://github.com/LainWireless"
   weight = 10
 
 [[menu.shortcuts]]
-  name = "<i class='fab fa-linkedin'></i> Linkedin"
+  name = "<i class='fab fa-linkedin'></i> LinkedIn"
   url = "https://www.linkedin.com/in/ivan-pina-castillo/"
   weight = 20
+
+[[menu.shortcuts]]
+  name = "<i class='fas fa-envelope'></i> Correo"
+  url = "mailto: ivanpinacastillo2002@gmail.com"
+  weight = 25
 
 [[menu.shortcuts]]
   name = "<i class='fas fa-tags'></i> Tags"

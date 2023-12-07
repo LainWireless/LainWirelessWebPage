@@ -24,6 +24,8 @@ hideComments = true
 
 Para esta parte de la práctica, he optado por hacerla en dos escenarios Vagrant, por lo cuál en esta parte habrá dos Vagrantfiles diferentes (lo he hecho así para organizarme mejor):
 
+#### Servidor
+
 El Vagrantfile del primer escenario que montaremos (el que actuará como servidor):
 ```ruby
 Vagrant.configure("2") do |config|
@@ -54,6 +56,8 @@ Vagrant.configure("2") do |config|
      end
   end
 ```
+
+#### Cliente
 
 El Vagrantfile del segundo escenario que montaremos (el que actuará como cliente):
 ```ruby
@@ -86,13 +90,15 @@ Vagrant.configure("2") do |config|
   end
 ```
 
+#### Resultado
+
 Tendremos el siguiente escenario:
 
      En el escenario 1 (172.30.0.0/24): Hay dos máquinas conectadas a través de una red interna. La máquina "Servidor1" tendrá una conexión a internet y será alcanzable por "Servidor2", mientras que la máquina "Cliente1" sólo será capaz de acceder a "Servidor1".
 
      En el escenario 2 (172.20.0.0/24): También hay dos máquinas, incluyendo "Servidor2" que será accesible desde la máquina "Servidor1" y su cliente "Cliente2", este último solo tendrá conexión a "Servidor2".
 
-### Configuración en el escenario 1 (Servidor)
+### Instalación y configuración de OpenVPN en el escenario 1 (Servidor)
 
 En primer lugar tendremos que crear un fichero llamado vars (cuyo contenido lo sacaremos de una plantilla que hay en el mismo directorio), para que contenga la información que después tendrá nuestra Autoridad Certificadora:
 ```bash
@@ -117,42 +123,42 @@ Ahora tendremos que crear el directorio en el que se almacenarán todos los docu
 ```bash
 ./easyrsa init-pki
 ```
-![Ejercicio 2](capturas/2/1.png) 
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/1.png) 
 
 Por último, antes de crear la Autoridad Certificadora, tendremos que crear una clave “Diffie-Hellman”:
 ```bash
 ./easyrsa gen-dh
 ```
-![Ejercicio 2](capturas/2/2.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/2.png)
 
 Ahora ya podemos crear la Autoridad Certificadora:
 ```bash
 ./easyrsa build-ca
 ```
-![Ejercicio 2](capturas/2/3.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/3.png)
 
 Ya tenemos nuestra Autoridad Certificadora lista, por lo que lo primero que tenemos que hacer es crear y firmar el certificado que usará nuestra máquina “Servidor1”:
 ```bash
 ./easyrsa gen-req server
 ```
-![Ejercicio 2](capturas/2/4.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/4.png)
 
 ```bash
 ./easyrsa sign-req server server
 ```
-![Ejercicio 2](capturas/2/5.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/5.png)
 
 
 Una vez que hemos creado el certificado del servidor y lo hemos firmado, pasemos a crear y firmar el certificado que usará la máquina “Servidor2” del escenario 2 para acceder a la VPN:
 ```bash
 ./easyrsa gen-req vpn_escenario2
 ```
-![Ejercicio 2](capturas/2/6.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/6.png)
 
 ```bash
 ./easyrsa sign-req client vpn_escenario2
 ```
-![Ejercicio 2](capturas/2/7.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/7.png)
 
 Ahora vamos a tener que copiar los ficheros que necesitaremos para que el servidor vpn funcione en /etc/openvpn/server:
 ```bash
@@ -213,7 +219,7 @@ systemctl start openvpn-server@servidor
 
 Podemos ver el servicio activo:
 
-![Ejercicio 2](capturas/2/8.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/8.png)
 
 
 No debemos olvidar el bit de forwarding en el servidor:
@@ -230,7 +236,7 @@ ip r add default via 172.30.0.10
 
 Con esto hemos terminado en el lado del escenario 1.
 
-### Configuración en el escenario 2 (Cliente)
+### Instalación y configuración de OpenVPN en el escenario 2 (Cliente)
 
 En este escenario tenemos que configurar la máquina “Servidor2” para que actúe como el otro extremo del túnel vpn. Para ello, lo primero es mover los ficheros que enviamos desde el escenario 1 a la carpeta adecuada:
 ```bash
@@ -276,7 +282,7 @@ systemctl start openvpn-client@cliente
 
 Vamos a comprobar que el servicio está funcionando correctamente:
 
-![Ejercicio 2](capturas/2/9.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/9.png)
 
 También debemos activar el ip de forwarding en esta máquina:
 ```bash
@@ -290,20 +296,22 @@ ip r del default
 ip r add default via 172.20.0.10
 ```
 
+### Pruebas de funcionamiento
+
 Ya hemos terminado de configurar este escenario y podemos pasar a hacer las pruebas:
 
 - Las rutas del servidor del escenario 1:
 
-![Ejercicio 2](capturas/2/10.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/10.png)
 
 - Las rutas del servidor del escenario 2:
 
-![Ejercicio 2](capturas/2/11.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/11.png)
 
 - Desde el cliente del escenario 1:
 
-![Ejercicio 2](capturas/2/12.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/12.png)
 
 - Desde el cliente del escenario 2:
 
-![Ejercicio 2](capturas/2/13.png)
+![Ejercicio 2](/img/ciberseguridad/vpn/vpnb/13.png)

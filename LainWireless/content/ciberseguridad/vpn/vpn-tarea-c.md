@@ -11,11 +11,12 @@ hideComments = true
 
 ## Enunciado
 
-    Monta una VPN de acceso remoto usando Wireguard. Intenta probarla con clientes Windows, Linux y Android. Documenta el proceso adecuadamente y compáralo con el del apartado A.
+    Monta una VPN de acceso remoto usando Wireguard. Intenta probarla con clientes Windows, Linux y Android. Documenta el proceso adecuadamente.
 
 Vamos a establecer una VPN de acceso remoto con Wireguard, la cual conectará tres clientes con una red interna. Estos clientes incluyen una máquina Debian 11, una máquina Windows 10, y una máquina Android. Para probar el funcionamiento, he creado una máquina Debian conectada a una red interna para que los clientes puedan acceder a ella a través del túnel VPN creado.
 
-### Cliente Interno:
+### Creación del escenario del Cliente Interno:
+
 A continuación el Vagrantfile del cliente interno:
 ```ruby
 Vagrant.configure("2") do |config|
@@ -43,7 +44,7 @@ ip r del default
 ip r add default via 192.168.20.1
 ```
 
-### Servidor
+### Creación del escenario del Servidor
 
 A conticuación el Vagrantfile del cliente interno:
 ```ruby
@@ -71,6 +72,8 @@ Vagrant.configure("2") do |config|
      end
  end
 ```
+
+### Instalación y configuración de Wireguard en el servidor
 
 Así pues, comencemos con la configuración del servidor. Lo primero es instalar el paquete:
 ```bash
@@ -102,13 +105,13 @@ wg genkey | tee serverprivatekey | wg pubkey > serverpublickey
 cat serverprivatekey
 IGkz3XEzlEDdOt4/2WQ51liVpMBH8hOZQIBZSuwsnEE=
 ```
-![Ejercicio 3](capturas/3/1.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/1.png)
 
 ```bash
 cat serverpublickey
 4vaeIibx/PXkKedQKHyPY8V11aQmknr21Q6yYHMUMlE=
 ```
-![Ejercicio 3](capturas/3/2.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/2.png)
 
 En este momento crearemos el fichero de configuración, que tendrá de nombre la interfaz que se creará (wg0):
 ```bash
@@ -131,7 +134,7 @@ En este momento ya podemos activar la interfaz que hemos creado:
 ```bash
 wg-quick up wg0
 ```
-![Ejercicio 3](capturas/3/3.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/3.png)
 
 Para desactivarla ejecutaríamos lo siguiente:
 ```bash
@@ -141,15 +144,15 @@ Podemos ver que el servidor se encuentra activo con:
 ```bash
 wg
 ```
-![Ejercicio 3](capturas/3/4.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/4.png)
 
 También podemos ver que se ha creado la interfaz que hemos definido con el comando ip a:
 
-![Ejercicio 3](capturas/3/5.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/5.png)
 
 Hemos completado la configuración básica del servidor. Ahora procederemos a configurar los clientes.
 
-### Cliente Linux (Debian 11)
+### Creación del escenario del Cliente Linux (Debian 11)
 
 El Vagrantfile del cliente:
 ```ruby
@@ -172,6 +175,8 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+### Instalación y configuración de Wireguard en el cliente Linux
+
 Al igual que hicimos con el servidor, tendremos que instalar wireguard y crear el par de claves:
 ```bash
 apt install wireguard
@@ -184,13 +189,13 @@ wg genkey | tee clientprivatekey | wg pubkey > clientpublickey
 cat clientprivatekey
 QC9vMrRVf1zWwaeEuuOyvHDpBDC9ROsoTqQsSVQtR14=
 ```
-![Ejercicio 3](capturas/3/6.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/6.png)
 
 ```bash
 cat clientpublickey
 4srF53WRGSsa/A5iHiRrmR4juXaNSaYRdecy1Gpd6DI=
 ```
-![Ejercicio 3](capturas/3/7.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/7.png)
 
 Al igual que hicimos en el servidor, también crearemos un fichero de configuración con la siguiente información:
 ```bash
@@ -218,11 +223,11 @@ Con esto ya podemos activar la interfaz que hemos configurado:
 ```bash
 wg-quick up wg0
 ```
-![Ejercicio 3](capturas/3/8.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/8.png)
 
 También podemos ver la interfaz que hemos creado:
 
-![Ejercicio 3](capturas/3/9.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/9.png)
 
 Ya tenemos el cliente configurado, así que ahora debemos agregar el "Peer" al lado del cliente. Para ello, nos volveremos al servidor.
 
@@ -256,33 +261,35 @@ Hecho esto, ya podemos reiniciar el servicio:
 ```bash
 wg-quick down wg0
 ```
-![Ejercicio 3](capturas/3/10.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/10.png)
     
 ```bash
 wg-quick up wg0
 ```
-![Ejercicio 3](capturas/3/11.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/11.png)
 
 Podemos ver el servicio activado con el cliente conectado:
 ```bash
 wg
 ```
-![Ejercicio 3](capturas/3/12.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/12.png)
 
 Con esto ya hemos terminado completamente con el cliente Linux. 
+
+### Pruebas de funcionamiento
 
 Probemos si ha funcionado:
 
 - Ping y traceroute desde el cliente VPN a la red interna:
 
-![Ejercicio 3](capturas/3/13.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/13.png)
 
 - Ping y traceroute desde el cliente interno al cliente VPN:
 
-![Ejercicio 3](capturas/3/14.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/14.png)
 
 
-## Cliente Windows (Windows 10)
+### Instalación y configuración de Wireguard en el cliente Windows (Windows 10)
 
 Lo primero que haré será configurar estáticamente la interfaz:
 ```cmd
@@ -293,7 +300,7 @@ Luego instalaremos el programa de Windows desde la página oficial de WireGuard.
 
 Después, ya una vez dentro del programa, debemos crear un túnel vacío (empty tunnel). Al pulsar el botón, Windows nos generará automáticamente las claves necesarias. Finalmente, el fichero de configuración de igual forma que en el cliente Linux.
 
-![Ejercicio 3](capturas/3/15.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/15.png)
 
 Una vez hecho esto, pasamos de nuevo al lado del servidor, en el cual tendremos que añadir un nuevo bloque “Peer” al igual que hicimos con el cliente Linux:
 ```bash
@@ -329,33 +336,35 @@ wg-quick up wg0
 
 Una vez iniciado en el servidor, activamos el túnel en el cliente windows:
 
-![Ejercicio 3](capturas/3/16.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/16.png)
 
 Podemos ver en el lado del servidor que se ha añadido un nuevo “Peer”:
 
-![Ejercicio 3](capturas/3/17.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/17.png)
+
+### Pruebas de funcionamiento
 
 Hagamos las pruebas:
 
 - Ping y traceroute desde el cliente windows a la red interna:
 
-![Ejercicio 3](capturas/3/18.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/18.png)
 
 - Ping y traceroute desde el cliente windows al cliente linux:
 
-![Ejercicio 3](capturas/3/19.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/19.png)
 
-### Cliente Android (Android 11)
+### Instalación y configuración de Wireguard en el cliente Android (Android 11)
 
     Para este ejercicio, he usado un móvil real con Android 11 en lugar de una máquina virtual. Es por ello que ahora el servidor VPN será mi anfitrión en lugar de la máquina virtual. Esto no afecta a la configuración del cliente Android, ya que la metodología es la misma.
 
 Para usar Wireguard con Android, primero tenemos que descargarnos la aplicación desde la playstore:
 
-![Ejercicio 3](capturas/3/20.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/20.png)
 
 Una vez en la aplicación, veremos que nos da tres opciones para crear el túnel:
 
-![Ejercicio 3](capturas/3/21.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/21.png)
 
 En mi caso, considero que es más sencillo y rápido usar la opción de “escanear desde código QR”. Para ello, primero tendremos que crear el fichero de configuración en nuestra máquina servidora VPN, y después nos descargaremos un paquete para convertir dicho fichero en un código qr que pueda escanear nuestro dispositivo móvil (tenemos que generar el par de claves en el servidor VPN para el cliente Android):
 ```bash
@@ -395,11 +404,11 @@ Y lo ejecutamos:
 ```bash
 qrencode -t ansiutf8 < ClienteAndroid.conf
 ```
-![Ejercicio 3](capturas/3/24.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/24.png)
 
 Ahora lo escaneamos con el móvil. Una vez escaneado podemos ver la configuración que ha importado:
 
-![Ejercicio 3](capturas/3/25.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/25.png)
 
 Ya solo tenemos que añadir el nuevo bloque “Peer” a la configuración del servidor:
 ```bash
@@ -429,22 +438,18 @@ wg-quick up wg0
 
 En este momento podemos ver que está conectado el cliente Android (tras iniciar el túnel en el dispositivo móvil):
 
-![Ejercicio 3](capturas/3/26.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/26.png)
+
+### Pruebas de funcionamiento
 
 Ahora ya podemos realizar las pruebas de funcionamiento (he instalado una aplicación llamada PingTools Network Utilities para ejecutar los comandos adecuados):
 
 - Ping y traceroute desde el cliente android al servidor VPN (anfitrión):
 
-![Ejercicio 3](capturas/3/27.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/27.png)
 
-![Ejercicio 3](capturas/3/28.png)
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/28.png)
 
 - Ping y traceroute desde el cliente interno a la interfaz del túnel en el cliente Android (creé un nuevo cliente interno para probar esto):
 
-![Ejercicio 3](capturas/3/29.png)
-
-### Comparativa con OpenVPN
-
-Después de realizar todos los pasos para establecer un acceso remoto con OpenVPN y Wireguard, me he dado cuenta de que hay algunas diferencias entre ambos protocolos y ninguna de ellas es mejor que la otra, sino que depende de las necesidades de cada usuario pero que respecto a mis necesidades, Wireguard me convence más.
-
-Por ejemplo, en todas las pruebas que he realizado con máquinas virtuales, se ve claramente que Wireguard es mucho más veloz. Esto, en un entorno real, daría un salto cualitativo en la experiencia de usuario. Algo a destacar es que la configuración de Wireguard es mucho más sencilla y se comparte de la misma forma en los clientes, sin importar el sistema operativo. Y por último, no hay necesidad de crear una autoridad certificadora para Wireguard, lo cual es una gran ventaja a la hora de configurar el túnel, ya que no hay que preocuparse de crear un certificado para cada cliente. Simplemente se genera una clave privada y pública para cada cliente y se añade al fichero de configuración del servidor.
+![Ejercicio 3](/img/ciberseguridad/vpn/vpnc/29.png)

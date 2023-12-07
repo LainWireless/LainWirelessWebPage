@@ -11,9 +11,11 @@ hideComments = true
 
 ## Enunciado
 
-     Configura una VPN sitio a sitio usando WireGuard. Documenta el proceso adecuadamente y compáralo con el del apartado B.
+     Configura una VPN sitio a sitio usando WireGuard. Documenta el proceso adecuadamente.
 
 En esta ocasión, estamos montando el mismo escenario que en el apartado B pero usando Wireguard para la conexión. Por lo tanto, he usado el mismo código del archivo 'Vagrantfile' para montar el entorno. Una vez hecho esto, necesitamos configurar correctamente las máquinas para que puedan establecer la conexión.
+
+### Configuración de Wireguard en los clientes
 
 Empezando por ambos clientes, es necesario modificar su ruta predeterminada:
 
@@ -30,6 +32,8 @@ ip r del default
 
 ip r add default via 172.20.0.10
 ```
+
+### Configuración de Wireguard en el servidor
 
 Una vez que hemos hecho esto, podemos pasar a las máquinas que actuarán como servidor y cliente de Wireguard.
 
@@ -57,13 +61,13 @@ wg genkey | tee serverprivatekey | wg pubkey > serverpublickey
 cat serverprivatekey
 gJRR9JNcc+FL2/rNisGG1s8XioXV3Dsf8CJJeQ9hG2I=
 ```
-![Ejercicio 4](capturas/4/1.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/1.png)
 
 ```bash
 cat serverpublickey
 AbwKDDHYW0gqFz3eFem8icPsIujhKI5cQKj0ndA60hE=
 ```
-![Ejercicio 4](capturas/4/2.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/2.png)
 
 Ahora ya podemos crear el fichero de configuración, que será muy parecido al que creamos en el apartado anterior:
 ```bash
@@ -80,13 +84,13 @@ En este momento, ya podemos probar a iniciar el servicio:
 ```bash
 wg-quick up wg0
 ```
-![Ejercicio 4](capturas/4/3.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/3.png)
 
 Podemos ver que el servicio se ha iniciado correctamente:
 ```bash
 wg
 ```
-![Ejercicio 4](capturas/4/4.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/4.png)
 
 Ahora debemos configurar la máquina “Servidor2” que actuará como cliente de Wireguard en el escenario 2. Así que, instalamos Wireguard en esa máquina:
 ```bash
@@ -113,13 +117,13 @@ wg genkey | tee clientprivatekey | wg pubkey > clientpublickey
 cat clientprivatekey
 cG/yhjjEESUFZtzIHTTsMDHRYDbE2pTrxMG/urTbEGE=
 ```
-![Ejercicio 4](capturas/4/5.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/5.png)
 
 ```bash
 cat clientpublickey
 UrnkB88Bj8keOto4bac+c/CaXhJQKCdg7Bj5+pAQDhU=
 ```
-![Ejercicio 4](capturas/4/6.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/6.png)
 
 Y creamos el fichero de configuración que usará esta máquina tal y como hicimos en el aparatado anterior, creando también el bloque de “Peer”:
 ```bash
@@ -159,41 +163,34 @@ wg-quick down wg0
 
 wg-quick up wg0
 ```
-![Ejercicio 4](capturas/4/7.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/7.png)
 
 Ya podemos iniciar el servicio en el escenario 2:
 ```bash
 wg-quick up wg0
 ```
-![Ejercicio 4](capturas/4/8.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/8.png)
 
 Y podemos ver que se ha establecido la conexión:
 
-![Ejercicio 4](capturas/4/9.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/9.png)
+
+### Pruebas de funcionamiento
 
 Ahora ya podemos realizar las pruebas necesarias:
 
 - Rutas en la máquina “Servidor1” del escenario 1:
 
-![Ejercicio 4](capturas/4/10.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/10.png)
 
 - Ping y traceroute desde el cliente del escenario 1 al cliente del escenario 2:
 
-![Ejercicio 4](capturas/4/11.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/11.png)
 
 - Rutas en la máquina “Servidor2” del escenario 2:
 
-![Ejercicio 4](capturas/4/12.png)
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/12.png)
 
 - Ping y traceroute desde el cliente del escenario 2 al cliente del escenario 1:
 
-![Ejercicio 4](capturas/4/13.png)
-
-
-### Comparativa con OpenVPN
-
-Tras la configuración, he podido comprobar que Wireguard es mucho mejor que OpenVPN en cuanto a velocidad, estabilidad de la conexión y facilidad de configuración. Esto es algo que he podido notar al realizar pruebas y establecer conexiones entre máquinas virtuales. Los resultados son bastante superiores a los que obtenía con OpenVPN, con una mayor rapidez y estabilidad.
-
-OpenVPN es una herramienta más antigua y que tiene más años de desarrollo que Wireguard, por lo que es posible que en un futuro Wireguard mejore aún más y se convierta en una herramienta más potente y eficiente que OpenVPN.
-
-En conclusión, la configuración de Wireguard es mucho más sencilla, rápida y con resultados mejores que los que obtenía con OpenVPN. Al probarlo, he comprobado que es mucho más eficiente tanto en lo que respecta a la velocidad como a la estabilidad de la conexión. 
+![Ejercicio 4](/img/ciberseguridad/vpn/vpnd/13.png)
