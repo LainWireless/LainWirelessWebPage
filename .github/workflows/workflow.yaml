@@ -1,8 +1,8 @@
 #
 # hugo-deploy.yaml
 # Archivo de configuración de GitHub Actions para:
-# 1. Verificar y desplegar la infraestructura con Terraform cuando se haga push a alguno de los directorios "Terraform" o "Blog de Juanje"
-# 2. Construir el sitio web con Hugo y desplegarlo en S3 cuando se haga push al directorio "Blog de Juanje"
+# 1. Verificar y desplegar la infraestructura con Terraform cuando se haga push a alguno de los directorios "Terraform" o "LainWireless"
+# 2. Construir el sitio web con Hugo y desplegarlo en S3 cuando se haga push al directorio "LainWireless"
 #
 
 name: "Workflow"

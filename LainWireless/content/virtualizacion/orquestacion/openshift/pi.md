@@ -3,6 +3,7 @@ title = "Iniciación a OpenShift Serverless y Knative Serving"
 weight = 15
 chapter = false
 author = "Iván Piña Castillo"
+cover = "/img/virtualizacion/orquestacion/openshift/pi/Portada.jpg"
 tags = ["OpenShift", "Knative", "Serverless", "Kubernetes", "Orquestador de contenedores"]
 description = "Documentación de mi proyecto integrado sobre OpenShift Serverless y Knative Serving."
 readingTime = true
